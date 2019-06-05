@@ -21,7 +21,7 @@ public class KafkaConfig {
     private String consumerGroup;
     private Level logLevel=Level.WARN;
   //  private int partitionCount;
-    private String islocal;
+    private boolean islocal;
     private String zkServer;
 
     public KafkaConfig(String configPath) throws IOException{
@@ -54,7 +54,7 @@ public class KafkaConfig {
         kafkaBootstarpServer=prop.getProperty(KAFKA_BOOTSTRAP_SERVER);
         consumerGroup=prop.getProperty(GROUP_ID);
        // logLevel=prop.getProperty(LOCAL);
-        islocal=prop.getProperty(LOCAL);
+        islocal=Boolean.parseBoolean(prop.getProperty(LOCAL));
         zkServer=prop.getProperty(ZK_SERVER);
     }
 
@@ -74,7 +74,7 @@ public class KafkaConfig {
         return logLevel;
     }
 
-    public String getIslocal() {
+    public boolean getIslocal() {
         return islocal;
     }
 
