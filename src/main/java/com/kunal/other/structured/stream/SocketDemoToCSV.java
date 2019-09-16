@@ -1,5 +1,7 @@
 package com.kunal.other.structured.stream;
 
+import com.kunal.other.Util;
+import com.kunal.util.SparkSeesionUtil;
 import org.apache.spark.sql.Dataset;
 import org.apache.spark.sql.Row;
 import org.apache.spark.sql.SparkSession;
@@ -12,7 +14,7 @@ public class SocketDemoToCSV {
 
     public static void main(String[] args)throws StreamingQueryException {
 
-        SparkSession spark=Util.getSparkSession();
+        SparkSession spark= SparkSeesionUtil.createSparkSession();//getSparkSession();
 
         Dataset<Row> socketDF = spark
                 .readStream()

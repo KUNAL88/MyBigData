@@ -1,6 +1,7 @@
 package com.kunal.other.structured.stream;
 
-import org.apache.spark.SparkConf;
+import com.kunal.other.Util;
+import com.kunal.util.SparkSeesionUtil;
 import org.apache.spark.api.java.function.FlatMapFunction;
 import org.apache.spark.sql.Dataset;
 import org.apache.spark.sql.Encoders;
@@ -16,7 +17,7 @@ public class SocketDemo {
 
     public static void main(String[] args) throws StreamingQueryException {
 
-        SparkSession spark=Util.getSparkSession();
+        SparkSession spark= SparkSeesionUtil.createSparkSession();// Util.getSparkSession();
 
         Dataset<Row> lines = spark
                 .readStream()

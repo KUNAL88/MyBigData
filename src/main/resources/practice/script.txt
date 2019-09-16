@@ -1,0 +1,8 @@
+scala> val a=sc.textFile("hdfs://localhost:9000/user/kunal/practice/spark/sample*");
+a: org.apache.spark.rdd.RDD[String] = hdfs://localhost:9000/user/kunal/practice/spark/sample* MapPartitionsRDD[4] at textFile at <console>:24
+
+scala> a.count()
+res0: Long = 3
+
+scala> a.collect()
+res1: Array[String] = Array(sample-1, sample-1, sample-1)

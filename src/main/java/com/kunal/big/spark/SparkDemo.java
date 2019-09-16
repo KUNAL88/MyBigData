@@ -19,6 +19,8 @@ public class SparkDemo {
             sparkConfig.setMaster("local[2]");
         }
 
+      //  SparkSession.Builder b=SparkSession.builder();
+
         SparkSession session=SparkSession.builder()
                 .config(sparkConfig)
                 .enableHiveSupport()

@@ -1,4 +1,4 @@
-package com.kunal.other.structured.stream;
+package com.kunal.other;
 
 import org.apache.spark.SparkConf;
 import org.apache.spark.sql.SparkSession;

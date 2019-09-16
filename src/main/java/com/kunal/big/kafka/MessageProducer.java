@@ -26,6 +26,8 @@ public class MessageProducer {
             sparkConf.setMaster("local[2]");
         }
 
+
+
         SparkSession session=SparkSession
                 .builder()
                 .config(sparkConf)

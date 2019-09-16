@@ -33,6 +33,8 @@ public class MessageConsumer {
 
       //  String startOffset=
 
+
+
         Dataset<Row> lines = session
                 .readStream()
                 .format("kafka")
