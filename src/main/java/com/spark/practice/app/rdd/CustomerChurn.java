@@ -35,7 +35,7 @@ public class CustomerChurn implements Serializable {
 
         JavaSparkContext javaSparkContext=JavaSparkContext.fromSparkContext(sparkContext);
 
-        JavaRDD<String> customerChurnRDD=javaSparkContext.textFile("hdfs://localhost:9000/user/kunal/practice/spark/customer-churn.csv");
+        JavaRDD<String> customerChurnRDD=javaSparkContext.textFile("hdfs://localhost:9000/user/kunal/com.spark.practice.practice/spark/customer-churn.csv");
 
         customerChurnRDD=customerChurnRDD.filter(new Function<String, Boolean>() {
             @Override

@@ -33,7 +33,7 @@ public class IdentifyInvoiceID {
 
         JavaSparkContext javaSparkContext=JavaSparkContext.fromSparkContext(sparkContext);
 
-        JavaRDD<String> retailRDD=javaSparkContext.textFile("hdfs://localhost:9000/user/kunal/practice/spark/Online-Retail.csv");
+        JavaRDD<String> retailRDD=javaSparkContext.textFile("hdfs://localhost:9000/user/kunal/com.spark.practice.practice/spark/Online-Retail.csv");
 
        /* System.out.println(retailRDD.count());
         System.out.println(retailRDD.take(10));*/
@@ -68,7 +68,7 @@ public class IdentifyInvoiceID {
 
       // System.out.println(retailRDD.take(10));
 
-       retailRDD.saveAsTextFile("hdfs://localhost:9000/user/kunal/practice/output/1");
+       retailRDD.saveAsTextFile("hdfs://localhost:9000/user/kunal/com.spark.practice.practice/output/1");
 
 
     }

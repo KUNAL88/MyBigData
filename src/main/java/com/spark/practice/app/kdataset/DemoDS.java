@@ -34,7 +34,7 @@ public class DemoDS {
 
         Dataset<Row> dataset=sparkSession
                 .read()
-                .csv("hdfs://localhost:9000/user/kunal/practice/spark/customer-churn.csv")
+                .csv("hdfs://localhost:9000/user/kunal/com.spark.practice.practice/spark/customer-churn.csv")
                 .repartition(2);
 
 

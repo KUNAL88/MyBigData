@@ -61,13 +61,13 @@
         <version>1.7.7</version>
         <executions>
           <execution>
-            <phase>clean</phase>
+            <phase>generate-sources</phase>
             <goals>
               <goal>schema</goal>
             </goals>
             <configuration>
-              <sourceDirectory>/home/kunal/bigdata_poc/MyBigData/src/main/resources/avro/</sourceDirectory>
-              <outputDirectory>/home/kunal/bigdata_poc/MyBigData/src/main/java/</outputDirectory>
+              <sourceDirectory>${project.basedir}/src/main/resources/schema/</sourceDirectory>
+              <outputDirectory>${project.basedir}/src/main/java/</outputDirectory>
             </configuration>
           </execution>
         </executions>
@@ -89,6 +89,12 @@
       <version>4.11</version>
       <scope>test</scope>
     </dependency-->
+
+    <dependency>
+      <groupId>org.apache.avro</groupId>
+      <artifactId>avro</artifactId>
+      <version>1.7.7</version>
+    </dependency>
 
     <dependency>
       <groupId>org.apache.spark</groupId>

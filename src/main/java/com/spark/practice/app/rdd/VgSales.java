@@ -43,7 +43,7 @@ public class VgSales {
 
         JavaSparkContext javaSparkContext=JavaSparkContext.fromSparkContext(sparkContext);
 
-        JavaRDD<String> gamingSalesRDD=javaSparkContext.textFile("hdfs://localhost:9000/user/kunal/practice/spark/vgsales_cleaned.csv");
+        JavaRDD<String> gamingSalesRDD=javaSparkContext.textFile("hdfs://localhost:9000/user/kunal/com.spark.practice.practice/spark/vgsales_cleaned.csv");
 
         gamingSalesRDD=gamingSalesRDD.filter(new Function<String, Boolean>() {
             @Override
@@ -88,9 +88,6 @@ public class VgSales {
         };
 
        // Function2<>
-
-
-
 
         JavaPairRDD<String, Integer> eachPlatFormCount= platformKey.reduceByKey(new Function2<Integer, Integer, Integer>() {
             @Override

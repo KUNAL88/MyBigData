@@ -35,7 +35,7 @@ public class App {
         JavaSparkContext javaSparkContext=JavaSparkContext.fromSparkContext(sparkContext);
 
         JavaRDD<String> rdd= javaSparkContext
-                .textFile("hdfs://localhost:9000/user/kunal/practice/spark/sample_file1.txt",2);
+                .textFile("hdfs://localhost:9000/user/kunal/com.spark.practice.practice/spark/sample_file1.txt",2);
 
         JavaRDD<Integer> stringLength=rdd.map(new Function<String, Integer>() {
             @Override

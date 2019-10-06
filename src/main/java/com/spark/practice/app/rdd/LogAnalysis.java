@@ -34,7 +34,7 @@ public class LogAnalysis {
         JavaSparkContext javaSparkContext=JavaSparkContext.fromSparkContext(sparkContext);
 
         JavaRDD<String> logRDD=javaSparkContext
-                .textFile("hdfs://localhost:9000/user/kunal/practice/spark/access_log_Jul95_empty_lines.txt");
+                .textFile("hdfs://localhost:9000/user/kunal/com.spark.practice.practice/spark/access_log_Jul95_empty_lines.txt");
 
         logRDD=logRDD.filter(new Function<String, Boolean>() {
             @Override
